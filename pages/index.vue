@@ -21,6 +21,7 @@
           counter="25"
           filled
           label="search artist or albums"
+          autofocus
         />
       </form>
     </v-flex>
