@@ -20,21 +20,19 @@
 </template>
 
 <script>
+// import axios from 'axios'
+import { mapGetters } from 'vuex'
 import Card from '@/components/Card.vue'
 export default {
   middleware: 'search',
   components: {
     Card
   },
-  data () {
-    return {
-      results: this.$store.state.albums,
-      loadingStatus: false
-    }
-  },
   computed: {
+    ...mapGetters({ results: 'getAlbums' }),
+
     albumThere () {
-      return this.results.length > 0
+      return this.results
     }
   },
   methods: {

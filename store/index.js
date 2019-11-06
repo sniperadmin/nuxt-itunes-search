@@ -8,3 +8,9 @@ export const mutations = {
     state.albums = []
   }
 }
+
+export const getters = {
+  getAlbums (state) {
+    return state.albums
+  }
+}
